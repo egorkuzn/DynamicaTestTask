@@ -4,7 +4,7 @@ import lombok.*;
 
 import javax.persistence.*;
 
-import java.io.Serializable;
+import java.util.Objects;
 
 import static ru.dynamica.library.model.entity.BookEntity.ISBN_AND_ID_UNIQUE;
 
@@ -36,4 +36,17 @@ public class BookEntity extends BaseEntity {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "author_id", referencedColumnName = "id")
     private AuthorEntity author;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        BookEntity that = (BookEntity) o;
+        return Objects.equals(ISBN, that.ISBN) && Objects.equals(title, that.title);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(ISBN, title);
+    }
 }
