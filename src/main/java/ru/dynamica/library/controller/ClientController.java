@@ -25,7 +25,7 @@ public class ClientController {
     @PatchMapping("/${id}")
     @ApiOperation("Редактирование клиента")
     public ResponseEntity<ClientDto> updateClient(
-            @PathVariable int id,
+            @PathVariable Long id,
             @RequestParam String attribute,
             @RequestParam String newValue
     ) {

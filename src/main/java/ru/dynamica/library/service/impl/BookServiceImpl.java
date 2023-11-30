@@ -2,6 +2,7 @@ package ru.dynamica.library.service.impl;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import ru.dynamica.library.exception.NotFoundException;
 import ru.dynamica.library.mapper.BookMapper;
 import ru.dynamica.library.model.dto.BookDto;
 import ru.dynamica.library.model.entity.BookEntity;
@@ -32,7 +33,8 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public BookDto updateBook(int id, String attribute, String newValue) {
-        return bookRepository.findById(id).orElseThrow(() -> new NotFo("Продукт c id " + productId + " не найден."));
+    public BookDto updateBook(Long id, String attribute, String newValue) {
+        //TODO: написать обновление
+        return null;
     }
 }

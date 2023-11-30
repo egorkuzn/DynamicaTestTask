@@ -10,7 +10,7 @@ import ru.dynamica.library.model.entity.RentEntity;
         injectionStrategy = InjectionStrategy.CONSTRUCTOR,
         unmappedTargetPolicy = ReportingPolicy.IGNORE)
 public interface RentMapper {
-    RentDto authorEnityToAuthorDto(RentEntity authorEntity);
+    RentDto rentEnityToRentDto(RentEntity authorEntity);
 
-    RentEntity authorDtoToAuthorEnity(RentDto authorDto);
+    RentEntity rentDtoToRentEnity(RentDto authorDto);
 }

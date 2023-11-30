@@ -34,7 +34,7 @@ public class BookController {
     @PatchMapping("/${id}")
     @ApiOperation("Редактирование информации о книге")
     public ResponseEntity<BookDto> updateBook(
-            @PathVariable int id,
+            @PathVariable Long id,
             @RequestParam String attribute,
             @RequestParam String newValue
     ) {
