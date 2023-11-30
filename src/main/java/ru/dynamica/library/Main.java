@@ -1,2 +1,5 @@
-package ru.dynamica.library;public class Main {
+package ru.dynamica.library;
+
+
+public class Main {
 }
