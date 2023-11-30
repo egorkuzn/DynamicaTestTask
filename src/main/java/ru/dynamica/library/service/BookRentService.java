@@ -1,6 +1,6 @@
 package ru.dynamica.library.service;
 
-import ru.dynamica.library.model.dto.common.BookDto;
+import ru.dynamica.library.model.dto.BookDto;
 
 import java.util.List;
 

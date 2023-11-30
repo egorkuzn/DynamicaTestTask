@@ -1,8 +1,7 @@
-#postgres
 spring:
   jpa:
     database: POSTGRESQL
-    show-sql: false
+    show-sql: true
     hibernate:
       ddl-auto: update
     properties:
@@ -13,3 +12,10 @@ spring:
     username: ${DB_USERNAME:postgres}
     password: ${DB_PASSWORD:postgres}
     driver-class-name: org.postgresql.Driver
+  mvc:
+    pathmatch:
+      matching-strategy: ant-path-matcher
+
+
+
+
