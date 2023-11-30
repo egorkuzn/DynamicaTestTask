@@ -9,5 +9,5 @@ public interface BookService {
 
     BookDto addBook(BookDto newBook);
 
-    BookDto updateBook(int id, String attribute, String newValue);
+    BookDto updateBook(Long id, String attribute, String newValue);
 }

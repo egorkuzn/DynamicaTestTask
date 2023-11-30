@@ -6,4 +6,5 @@ import ru.dynamica.library.model.entity.BookEntity;
 
 @Repository
 public interface BookRepository extends JpaRepository<BookEntity, Long> {
+
 }
