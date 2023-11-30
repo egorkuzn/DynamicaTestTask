@@ -1,18 +1,33 @@
 {
   "clients" : [
     {
-
+      "id" : 1,
+      "name": "Иван",
+      "surname" : "Иванов",
+      "fathername" : "Иванович",
+      "birthday" : "2009-10-10"
+    }
+  ],
+  "authors" : [
+    {
+      "id" : 1,
+      "name" : "Фёдор",
+      "surname" : "Достоевский",
+      "fathername" : "Михайлович"
     }
   ],
   "books" : [
     {
-
+      "id" : 1,
+      "ISBN" : 1,
+      "title" : "Братья Карамазовы",
+      "authorId" : 1
     }
   ],
   "rent" : [
     {
-      "clientId": 1,
       "bookId" : 1,
+      "clientId": 1,
       "rentStartDate" : "2022-05-10"
     }
   ]
