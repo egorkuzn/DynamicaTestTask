@@ -5,6 +5,6 @@ import org.springframework.stereotype.Repository;
 import ru.dynamica.library.model.entity.AuthorEntity;
 
 @Repository
-public interface AuthorReepository extends JpaRepository<AuthorEntity, Long> {
+public interface AuthorRepository extends JpaRepository<AuthorEntity, Long> {
 
 }
