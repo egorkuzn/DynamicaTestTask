@@ -4,6 +4,8 @@ import lombok.*;
 
 import javax.persistence.*;
 
+import java.io.Serializable;
+
 import static ru.dynamica.library.model.entity.BookEntity.ISBN_AND_ID_UNIQUE;
 
 /**
