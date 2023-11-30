@@ -2,9 +2,7 @@ package ru.dynamica.library.model.entity;
 
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.UniqueConstraint;
+import javax.persistence.*;
 
 import static ru.dynamica.library.model.entity.BookEntity.ISBN_AND_ID_UNIQUE;
 
@@ -18,13 +16,25 @@ import static ru.dynamica.library.model.entity.BookEntity.ISBN_AND_ID_UNIQUE;
 @Setter
 @Builder
 @Table(
-        name = "version_metadata",
+        name = "book_metadata",
         uniqueConstraints = @UniqueConstraint(
                 name = ISBN_AND_ID_UNIQUE,
-                columnNames = {"ISBN", "id"}
+                columnNames = {"isbn", "id"}
         )
 )
 public class BookEntity extends BaseEntity {
     public static final String ISBN_AND_ID_UNIQUE = "isbn_and_id_unique";
 
+    @Column(name = "isbn", nullable = false)
+    private String ISBN;
+
+    @Column(name = "title", nullable = false)
+    private String title;
+
+    @Column(name = "rent_count", nullable = false)
+    private int rentCount = 0;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "author_id", referencedColumnName = "id")
+    private AuthorEntity author;
 }

@@ -15,7 +15,7 @@ import java.util.List;
 @Getter
 @Setter
 @Builder
-@Table(name = "author")
+@Table(name = "author_metadata")
 public class AuthorEntity extends BaseEntity {
     @Column(name = "name", nullable = false)
     private String name;
