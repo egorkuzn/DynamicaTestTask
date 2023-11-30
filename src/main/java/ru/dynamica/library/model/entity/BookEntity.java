@@ -31,9 +31,6 @@ public class BookEntity extends BaseEntity {
     @Column(name = "title", nullable = false)
     private String title;
 
-    @Column(name = "rent_count", nullable = false)
-    private int rentCount = 0;
-
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "author_id", referencedColumnName = "id")
     private AuthorEntity author;
