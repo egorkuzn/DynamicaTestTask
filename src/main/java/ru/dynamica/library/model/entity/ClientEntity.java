@@ -1,13 +1,9 @@
 package ru.dynamica.library.model.entity;
 
 import lombok.*;
-import org.hibernate.annotations.Entity;
 
-import javax.persistence.Column;
-import javax.persistence.ManyToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Date;
-import java.util.Set;
 
 /**
  * Представляет сущность, которая хранит мета-информацию о клиенте.

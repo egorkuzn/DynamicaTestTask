@@ -1,7 +1,6 @@
 package ru.dynamica.library.model.entity;
 
 import lombok.*;
-import org.hibernate.annotations.Entity;
 
 import javax.persistence.*;
 import java.util.Objects;
