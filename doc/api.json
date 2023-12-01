@@ -24,7 +24,7 @@
       "authorId" : 1
     }
   ],
-  "rent" : [
+  "rents" : [
     {
       "bookId" : 1,
       "clientId": 1,
