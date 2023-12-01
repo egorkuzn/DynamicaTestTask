@@ -18,7 +18,7 @@ public class LibraryController {
     private final LibraryService libraryService;
 
     @PostMapping
-    @ApiOperation("Добавление клиента")
+    @ApiOperation("Получение информации о всех взятых из библиотеки книг")
     public ResponseEntity<LibraryDto> getLibraryInfo() {
         LibraryDto response = libraryService.getLibraryInfo();
         return ResponseEntity.ok(response);
